@@ -1,0 +1,101 @@
+/* Navigation.css */
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    z-index: 1000; /* Ensure the navigation stays on top of other elements */
+  }
+  
+  .logo-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .navigation-items {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .admin-section {
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .drawer {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .close-btn {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  
+  .drawer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .drawer li {
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navigation {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navigation-items {
+      margin-top: 15px;
+    }
+  
+    .admin-section {
+      margin-top: 15px;
+      margin-right: 0;
+    }
+  
+    .drawer {
+      right: unset;
+      left: 10px;
+    }
+  }
+  
